@@ -35,3 +35,36 @@ var firstNPike = {
 
 firstNPike.generateCookiesSold();
 firstNPike.render();
+
+
+var seaTac = {
+  custMinHr: 3,
+  custMaxHr: 24,
+  avgSale: 1.2,
+  cookiesSold: [],
+  totalCookiesSold: 0,
+  render: function() {
+    var ulEl = document.getElementById('seatac')
+    for(var i = 0; i < businessHours.length; i++) {
+      var liEl = document.createElement('li');
+      liEl.textContent = businessHours[i] + ': ' + this.cookiesSold[i] + ' cookies';
+      ulEl.appendChild(liEl);
+    }
+    liEl = document.createElement('li');
+    liEl.textContent = 'Total Cookies Sold: ' + this.totalCookiesSold;
+    ulEl.appendChild(liEl); 
+  },
+  randomCustomers: function() {
+    return Math.floor(Math.random() * (this.custMaxHr - this.custMinHr))
+  },
+  generateCookiesSold: function() {
+    for(var i = 0; i < businessHours.length; i++) {
+      var cookiesSoldPerHour = Math.round(this.randomCustomers() * this.avgSale);
+      this.cookiesSold.push (cookiesSoldPerHour);
+      this.totalCookies += cookiesSoldPerHour;
+    }
+  },
+};
+
+seaTac.generateCookiesSold();
+seaTac.render();

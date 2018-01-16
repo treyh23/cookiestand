@@ -68,3 +68,35 @@ var seaTac = {
 
 seaTac.generateCookiesSold();
 seaTac.render();
+
+var seattleCenter = {
+  custMinHr: 11,
+  custMaxHr: 38,
+  avgSale: 3.7,
+  cookiesSold: [],
+  totalCookiesSold: 0,
+  render: function() {
+    var ulEl = document.getElementById('seacent');
+    for(var i = 0; i < businessHours.length; i++) {
+      var liEl = document.createElementById('li');
+      liEl.textContent = businessHours[i] + ': ' + this.cookiesSold[i] + ' cookies';
+      ulEl.appendChild(liEl);
+    }
+    liEl = document.createElement('li');
+    liEl.textContent = 'Total Cookies Sold: ' + this.totalCookiesSold;
+    ulEl.appendChild(liEl);
+  },
+  randomCustoms: function() {
+    return Math.floor(Math.random() * (this.custMaxHr - this.custMinHr));
+  },
+  generateCookiesSold: function() {
+    for(var i = 0; i < businessHours.length; i++) {
+      var cookiesSoldPerHour = Math.round(this.randomCustomers() * this.avgSale);
+      this.cookiesSold.push (cookiesSoldPerHour);
+      this.totalCookies += cookiesSoldPerHour;
+    }
+  }
+};
+
+seattleCenter.generateCookiesSold();
+seattleCenter.render();

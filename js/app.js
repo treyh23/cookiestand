@@ -2,6 +2,25 @@
 
 var businessHours = ['6AM','7AM','8AM','9AM','10AM','11AM','12PM','1PM','2PM','3PM','4PM','5PM','6PM','7PM','8PM'];
 
+var storeInfo = document.getElementById('cookiedata');
+
+var allStores = [];
+
+function Store(custMinHr,custMaxHr,avgSale,cookiesSold,totalCookiesSold) {
+  this.custMinHr = custMinHr;
+  this.custMaxHr = custMaxHr;
+  this.avgSale = avgSale;
+  this.cookiesSold = [];
+  this.totalCookiesSold = 0;
+  allStores.push(this);
+}
+Store.protoype.render = function() {
+  var trEl = document.createElement('tr');
+  var tdEl = document.createElement('td');
+  tdEl.textContent = this.custMinHr;
+  trEl.appendChild(tdEl);
+  storeTable.appendChild(trEl)
+};
 var firstNPike = {
   custMinHr: 23,
   custMaxHr: 65,

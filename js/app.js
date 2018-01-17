@@ -125,7 +125,7 @@ var capHill = {
     for(var i = 0; i < businessHours.length; i++) {
       var cookiesSoldPerHour = Math.round(this.randomCustomers() * this.avgSale);
       this.cookiesSold.push (cookiesSoldPerHour);
-      this.totalCookies += cookiesSoldPerHour;
+      this.totalCookiesSold += cookiesSoldPerHour;
     }
   },
 };
@@ -157,7 +157,7 @@ var alki = {
     for(var i = 0; i < businessHours.length; i++) {
       var cookiesSoldPerHour = Math.round(this.randomCustomers() * this.avgSale);
       this.cookiesSold.push (cookiesSoldPerHour);
-      this.totalCookies += cookiesSoldPerHour;
+      this.totalCookiesSold += cookiesSoldPerHour;
     }
   },
 };

@@ -19,7 +19,27 @@ Store.protoype.render = function() {
   var tdEl = document.createElement('td');
   tdEl.textContent = this.custMinHr;
   trEl.appendChild(tdEl);
-  storeTable.appendChild(trEl)
+
+  tdEl = document.createElement('td');
+  tdEl.textContent = this.custMinhr;
+  trEl.appendChild(trEl);
+
+  tdEl = document.createElement('td');
+  tdEl.textContent - this.custMaxHr;
+  trEl.appendChild(trEl);
+
+  tdEl = document.createElement('td');
+  tdEl.textContent - this.avgSale;
+  trEl.appendChild(trEl);
+
+  tdEl = document.createElement('td');
+  tdEl.textContent - this.cookiesSold;
+  trEl.appendChild(trEl);
+
+  tdEl = document.createElement('td');
+  tdEl.textContent = this.totalCookiesSold;
+
+  storeInfo.appendChild(tdEl);
 };
 var firstNPike = {
   custMinHr: 23,

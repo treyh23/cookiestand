@@ -132,7 +132,7 @@ var capHill = {
 
 capHill.generateCookiesSold();
 capHill.render();
-
+//wahts up
 var alki = {
   custMinHr: 2,
   custMaxHr: 16,

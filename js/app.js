@@ -43,7 +43,6 @@ Store.prototype.render = function() {
   tdEl.textContent = 'Total Cookies Sold: ' + this.totalCookiesSold;
   trEl.appendChild(tdEl);
 
-
   storeInfo.appendChild(trEl);
 };
 function header() {

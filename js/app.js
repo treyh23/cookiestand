@@ -3,7 +3,7 @@
 var businessHours = ['6AM','7AM','8AM','9AM','10AM','11AM','12PM','1PM','2PM','3PM','4PM','5PM','6PM','7PM','8PM'];
 
 var storeInfo = document.getElementById('cookiedata');
-
+var storeForm = document.getElementById('cookieform');
 var allStores = [];
 
 function Store(custMinHr,custMaxHr,avgSale,storeName) {
@@ -65,20 +65,30 @@ var seattleCenter = new Store(11,38,3.7,'Seattle Center');
 var capHill = new Store(20,38,2.3,'Captiol Hill');
 var alki = new Store(2,16,4.6,'Alki');
 
+function renderAllStores () {
+  for(var i = 0; i < allStores.length; i++) {
+    console.log(allStores[i]);
+    allStores[i].generateCookiesSold();
+    allStores[i].render();
+  }
+}
+
+function addNewStore(event) {
+  event.preventDefault();
+  console.log(event.target.shopLocation.value);
+  var shopLocation = event.target.shopLocation.value;
+  var minCust = event.target.custmin.value;
+  var maxCust = event.target.custmax.value;
+  var saleAvg = event.target.avgsale.value;
+
+  new Store(minCust,maxCust,saleAvg,shopLocation);
+
+  storeInfo.innerHTML = '';
+  header();
+  renderAllStores();
+}
 
 header();
-firstNPike.generateCookiesSold();
-firstNPike.render();
+renderAllStores();
 
-seaTacAirport.generateCookiesSold();
-seaTacAirport.render();
-
-seattleCenter.generateCookiesSold();
-seattleCenter.render();
-
-capHill.generateCookiesSold();
-capHill.render();
-
-alki.generateCookiesSold();
-alki.render();
-
+storeForm.addEventListener('submit', addNewStore);

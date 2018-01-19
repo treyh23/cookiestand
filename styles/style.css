@@ -14,17 +14,24 @@ nav li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+  display: inline;
+  padding: 8px;
+}
+
 h1 {
   text-align: center;
   font-family: 'PT Sans', sans-serif;
   color: #a96c42;
 }
 
-a {
-  text-decoration: none;
-  display: inline;
-  padding: 8px;
+h3 {
+  text-align: center;
+  font-family: 'PT Sans', sans-serif;
+  color: #7d6251;
 }
+
 
 p {
   text-align: center;
@@ -42,8 +49,8 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  
 }
+
 .row {
   width: 33.3%;
   margin: auto;
@@ -81,7 +88,7 @@ div li {
 }
 
 #logo {
-  margin-top: -50px;
+  margin-top: -25px;
   float: left;
 }
 

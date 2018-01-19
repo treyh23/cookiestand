@@ -44,7 +44,7 @@ h3 {
 
 .column {
   float: left;
-  width: 33.33%;
+  width: 50%;
 }
 
 /* Clear floats after the columns */
@@ -52,4 +52,8 @@ h3 {
   content: "";
   display: table;
   clear: both;
+}
+
+#name {
+  display: inline-block;
 }

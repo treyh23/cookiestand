@@ -13,11 +13,15 @@ nav li {
   display: inline;
   list-style: none;
 }
-
 a {
   text-decoration: none;
   display: inline;
   padding: 8px;
+}
+
+#logo {
+  margin-top: -25px;
+  float: left;
 }
 
 h1 {
@@ -31,43 +35,14 @@ h3 {
   font-family: 'PT Sans', sans-serif;
   color: #7d6251;
 }
-
-
-p {
-  text-align: center;
-  font-family: 'Merriweather', serif;
-  color: #7d6251;
-}
-
-li {
-  list-style: none;
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 3px;
-}
-
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .row {
-  width: 33.3%;
+  width: 50%;
   margin: auto;
 }
 
 .column {
   float: left;
-  width: 100%;
-  border: 2px solid #7d6251;
-}
-
-.column li {
-  text-align: center;
-}
-
-div li {
-  display: block;
+  width: 50%;
 }
 
 /* Clear floats after the columns */
@@ -77,18 +52,14 @@ div li {
   clear: both;
 }
 
-#title {
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #a96c42;
-}
-#hours {
+button {
+  border: 2px solid #a96c42;;
   color: #7d6251;
+  padding: 10px;
+  margin: 10px;
+  background-color: white;
+  font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;
-}
-
-#logo {
-  margin-top: -25px;
-  float: left;
+  text-align: center;
 }
 

@@ -6,13 +6,18 @@
     <link rel="stylesheet" type="text/css" href="styles/sales.css"/>
   </head>
   <body>
-    <nav>
-      <li><a href="index.html">Home</a></li>
-    </nav>
+      <nav id="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="merchandise.html">Merchandise</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="sales.html">Admin panel</a></li>
+          <a href="index.html"><img src="/Users/forresthosten/codefellows/201/cookiestand/img/salmon.png" height="60px"id="logo"/></a>
+
+      </nav>
+
     <h1>Salmon Cookie Sales</h1>
    
     <table id="cookiedata"></table>
-    <img src="/Users/forresthosten/codefellows/201/cookiestand/img/salmon.png" height="100px"/>
     <form id="cookieform">
       <fieldset>
         <legend>Add A New Store To The Table</legend>
@@ -21,13 +26,13 @@
         <input name="shopLocation" type="text"/>
 
         <label for="custmin">Customer Minimum</label>
-        <input name="custmin" type="text"/>
+        <input name="custmin" type="number"/>
 
         <label for="custmax">Customer Maximum</label>
-        <input name="custmax" type="text"/>
+        <input name="custmax" type="number"/>
 
         <label for="avgsale">Customer Average</label>
-        <input name="avgsale" type="text"/>
+        <input name="avgsale" type="number"/>
 
         <button id="submit">Submit Form</button>
 

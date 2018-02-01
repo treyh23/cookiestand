@@ -2,10 +2,12 @@
 
 var businessHours = ['6AM','7AM','8AM','9AM','10AM','11AM','12PM','1PM','2PM','3PM','4PM','5PM','6PM','7PM','8PM'];
 
+//connecting to the HTML
+
 var storeInfo = document.getElementById('cookiedata');
 var storeForm = document.getElementById('cookieform');
 var allStores = [];
-
+//constructor function to pass in the information
 function Store(custMinHr,custMaxHr,avgSale,storeName) {
   this.custMinHr = custMinHr;
   this.custMaxHr = custMaxHr;
@@ -15,7 +17,7 @@ function Store(custMinHr,custMaxHr,avgSale,storeName) {
   this.storeName = storeName;
   allStores.push(this);
 }
-
+//the function that creates the amount of cookies that were sold.
 Store.prototype.generateCookiesSold = function () {
   for(var i = 0; i < businessHours.length; i++) {
     // we are going to invoke the function against the avgSale variable to find how many cookies each customer bought  
@@ -24,10 +26,11 @@ Store.prototype.generateCookiesSold = function () {
     this.totalCookiesSold += cookiesSoldPerHour;
   }
 };
+//function that generates the amount of customers.
 Store.prototype.randomCustomers = function() {
   return Math.floor (Math.random() * (this.custMaxHr - this.custMinHr)) + this.custMinHr;
 };
-
+//render function creating the storename
 Store.prototype.render = function() {
   var trEl = document.createElement('tr');
   var tdEl = document.createElement('td');
@@ -45,6 +48,9 @@ Store.prototype.render = function() {
 
   storeInfo.appendChild(trEl);
 };
+
+// creating the content for each of the salmon cookie stores.
+
 function header() {
   var trEl = document.createElement('tr');
   var tdEl = document.createElement('td');
